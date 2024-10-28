@@ -9,7 +9,11 @@ function App() {
 
   return (
     <Fragment>
-      <LoginComponent></LoginComponent>
+      <section className='bg-gray-50  max-w-screen-2xl dark:bg-gray-900 font-black justify-center text-white'>
+        <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
+          <LoginComponent/>
+        </div>
+      </section>
 
       <ServiceAComponent></ServiceAComponent>
     </Fragment>

@@ -1,7 +1,13 @@
 import axios from "axios";
 import { getToken } from "../auth/authService";
+import  DatosURL  from "../../hooks/useService";
 
-const API_URL:string = 'https://api.zamorano.edu/estdatos/estdatos/v1/datos/getDatos';  
+
+
+const URL_COMPLEMENT = DatosURL().URL_COMPLEMENT;
+const API_VERION = DatosURL().API_VERION;
+
+const API_URL:string = `https://api.zamorano.edu/estdatos/estdatos/${API_VERION}/${URL_COMPLEMENT}`;
 
 export const fetchUsers = async () => {
     const token = getToken();  // Obtener el token almacenado
